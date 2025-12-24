@@ -45,69 +45,23 @@ Download and Install [Docker](https://docs.docker.com/engine/install/)
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/FlowiseAI/Flowise.git
+    git clone https://github.com/ica4me/Flowise.git
     ```
 
 2.  Go into repository folder:
 
     ```bash
-    cd Flowise
+    cd Flowise/docker
     ```
 
-3.  Install all dependencies of all modules:
+3.  Build:
 
     ```bash
-    pnpm install
+    docker compose up -d --build
     ```
+    
+4. You can now access the app on [http://localhost:3000](http://localhost:3000)
 
-4.  Build all the code:
-
-    ```bash
-    pnpm build
-    ```
-
-    <details>
-    <summary>Exit code 134 (JavaScript heap out of memory)</summary>  
-    If you get this error when running the above `build` script, try increasing the Node.js heap size and run the script again:
-
-    ```bash
-    # macOS / Linux / Git Bash
-    export NODE_OPTIONS="--max-old-space-size=4096"
-
-    # Windows PowerShell
-    $env:NODE_OPTIONS="--max-old-space-size=4096"
-
-    # Windows CMD
-    set NODE_OPTIONS=--max-old-space-size=4096
-    ```
-
-    Then run:
-
-    ```bash
-    pnpm build
-    ```
-
-    </details>
-
-5.  Start the app:
-
-    ```bash
-    pnpm start
-    ```
-
-    You can now access the app on [http://localhost:3000](http://localhost:3000)
-
-6.  For development build:
-
-    -   Create `.env` file and specify the `VITE_PORT` (refer to `.env.example`) in `packages/ui`
-    -   Create `.env` file and specify the `PORT` (refer to `.env.example`) in `packages/server`
-    -   Run:
-
-        ```bash
-        pnpm dev
-        ```
-
-    Any code changes will reload the app automatically on [http://localhost:8080](http://localhost:8080)
 
 ## 🌱 Env Variables
 
