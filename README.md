@@ -36,6 +36,7 @@ English | [繁體中文](./i18n/README-TW.md) | [简体中文](./i18n/README-ZH.
 ### Install With Docker in VPS Ubuntu/Debian
 
 Download and Install [NodeJS](https://nodejs.org/en/download) >= 18.15.0
+
 Download and Install [Docker](https://docs.docker.com/engine/install/)
 
 [Opsional] NGINX for reverse Proxy
