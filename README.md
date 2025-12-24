@@ -23,9 +23,7 @@ English | [繁體中文](./i18n/README-TW.md) | [简体中文](./i18n/README-ZH.
 
 ## 📚 Table of Contents
 
--   [⚡ Quick Start](#-quick-start)
--   [🐳 Docker](#-docker)
--   [👨‍💻 Developers](#-developers)
+-   [⚡ Install With Docker in VPS Ubuntu/Debian](#-quick-start)
 -   [🌱 Env Variables](#-env-variables)
 -   [📖 Documentation](#-documentation)
 -   [🌐 Self Host](#-self-host)
@@ -34,70 +32,11 @@ English | [繁體中文](./i18n/README-TW.md) | [简体中文](./i18n/README-ZH.
 -   [🙌 Contributing](#-contributing)
 -   [📄 License](#-license)
 
-## ⚡Quick Start
+
+### Install With Docker in VPS Ubuntu/Debian
 
 Download and Install [NodeJS](https://nodejs.org/en/download) >= 18.15.0
 
-1. Install Flowise
-    ```bash
-    npm install -g flowise
-    ```
-2. Start Flowise
-
-    ```bash
-    npx flowise start
-    ```
-
-3. Open [http://localhost:3000](http://localhost:3000)
-
-## 🐳 Docker
-
-### Docker Compose
-
-1. Clone the Flowise project
-2. Go to `docker` folder at the root of the project
-3. Copy `.env.example` file, paste it into the same location, and rename to `.env` file
-4. `docker compose up -d`
-5. Open [http://localhost:3000](http://localhost:3000)
-6. You can bring the containers down by `docker compose stop`
-
-### Docker Image
-
-1. Build the image locally:
-
-    ```bash
-    docker build --no-cache -t flowise .
-    ```
-
-2. Run image:
-
-    ```bash
-    docker run -d --name flowise -p 3000:3000 flowise
-    ```
-
-3. Stop image:
-
-    ```bash
-    docker stop flowise
-    ```
-
-## 👨‍💻 Developers
-
-Flowise has 3 different modules in a single mono repository.
-
--   `server`: Node backend to serve API logics
--   `ui`: React frontend
--   `components`: Third-party nodes integrations
--   `api-documentation`: Auto-generated swagger-ui API docs from express
-
-### Prerequisite
-
--   Install [PNPM](https://pnpm.io/installation)
-    ```bash
-    npm i -g pnpm
-    ```
-
-### Setup
 
 1.  Clone the repository:
 
