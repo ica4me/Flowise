@@ -4,10 +4,32 @@ Starts Flowise from [DockerHub Image](https://hub.docker.com/r/flowiseai/flowise
 
 ## Usage
 
-1. Create `.env` file and specify the `PORT` (refer to `.env.example`)
-2. `docker compose up -d`
-3. Open [http://localhost:3000](http://localhost:3000)
-4. You can bring the containers down by `docker compose stop`
+1. Create `.env` file and specify the `PORT` (refer to `.env.example`) or below
+   `PORT=3000
+SECRETKEY_PATH=/root/.flowise
+
+LOG_PATH=/root/.flowise/logs
+
+TOOL_FUNCTION_BUILTIN_DEP=crypto,fs,path
+TOOL_FUNCTION_EXTERNAL_DEP=mysql2,moment,lodash,axios,cheerio
+ALLOW_BUILTIN_DEP=true
+
+BLOB_STORAGE_PATH=/root/.flowise/storage
+
+CORS_ORIGINS=*
+IFRAME_ORIGINS=*
+FLOWISE_FILE_SIZE_LIMIT=500mb
+
+
+JWT_AUTH_TOKEN_SECRET='AABBCCDDAABBCCDDAABBCCDDAABBCCDDAABBCCDD'
+JWT_REFRESH_TOKEN_SECRET='AABBCCDDAABBCCDDAABBCCDDAABBCCDDAABBCCDD'
+JWT_ISSUER='ISSUER'
+JWT_AUDIENCE='AUDIENCE'
+JWT_TOKEN_EXPIRY_IN_MINUTES=360
+JWT_REFRESH_TOKEN_EXPIRY_IN_MINUTES=43200`
+3. `docker compose up -d`
+4. Open [http://localhost:3000](http://localhost:3000)
+5. You can bring the containers down by `docker compose stop`
 
 ## 🌱 Env Variables
 
