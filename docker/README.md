@@ -1,33 +1,35 @@
 # Flowise Docker Hub Image
 
-Starts Flowise from [DockerHub Image](https://hub.docker.com/r/flowiseai/flowise)
+Start Flowise using the [DockerHub Image](https://hub.docker.com/r/flowiseai/flowise).
 
 ## Usage
 
-1. Create `.env` file and specify the `PORT` (refer to `.env.example`) or below
-   `PORT=3000
-SECRETKEY_PATH=/root/.flowise
+1. Create a `.env` file in the same directory. You can copy the configuration below:
 
-LOG_PATH=/root/.flowise/logs
+   ```ini
+   PORT=3000
+   SECRETKEY_PATH=/root/.flowise
 
-TOOL_FUNCTION_BUILTIN_DEP=crypto,fs,path
-TOOL_FUNCTION_EXTERNAL_DEP=mysql2,moment,lodash,axios,cheerio
-ALLOW_BUILTIN_DEP=true
+   LOG_PATH=/root/.flowise/logs
 
-BLOB_STORAGE_PATH=/root/.flowise/storage
+   TOOL_FUNCTION_BUILTIN_DEP=crypto,fs,path
+   TOOL_FUNCTION_EXTERNAL_DEP=mysql2,moment,lodash,axios,cheerio
+   ALLOW_BUILTIN_DEP=true
 
-CORS_ORIGINS=*
-IFRAME_ORIGINS=*
-FLOWISE_FILE_SIZE_LIMIT=500mb
+   BLOB_STORAGE_PATH=/root/.flowise/storage
 
+   CORS_ORIGINS=*
+   IFRAME_ORIGINS=*
+   FLOWISE_FILE_SIZE_LIMIT=500mb
 
-JWT_AUTH_TOKEN_SECRET='AABBCCDDAABBCCDDAABBCCDDAABBCCDDAABBCCDD'
-JWT_REFRESH_TOKEN_SECRET='AABBCCDDAABBCCDDAABBCCDDAABBCCDDAABBCCDD'
-JWT_ISSUER='ISSUER'
-JWT_AUDIENCE='AUDIENCE'
-JWT_TOKEN_EXPIRY_IN_MINUTES=360
-JWT_REFRESH_TOKEN_EXPIRY_IN_MINUTES=43200`
-3. `docker compose up -d`
+   JWT_AUTH_TOKEN_SECRET='AABBCCDDAABBCCDDAABBCCDDAABBCCDDAABBCCDD'
+   JWT_REFRESH_TOKEN_SECRET='AABBCCDDAABBCCDDAABBCCDDAABBCCDDAABBCCDD'
+   JWT_ISSUER='ISSUER'
+   JWT_AUDIENCE='AUDIENCE'
+   JWT_TOKEN_EXPIRY_IN_MINUTES=360
+   JWT_REFRESH_TOKEN_EXPIRY_IN_MINUTES=43200
+   
+2. `docker compose up -d`
 4. Open [http://localhost:3000](http://localhost:3000)
 5. You can bring the containers down by `docker compose stop`
 
